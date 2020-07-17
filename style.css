@@ -3,6 +3,7 @@
     --page-2-color: mediumorchid;
     --page-3-color: mediumpurple;
     --page-4-color: cornflowerblue;
+    --animate-speed: 1s;
 }
 
 body {
@@ -62,3 +63,26 @@ body {
     background: white;
     color:black;
 }
+
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p {
+    transform: translateX(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in 2s;
+}
+
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes heading {
+    to {
+        transform: translateX(0);
+    }
+}
+
